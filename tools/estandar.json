@@ -46,7 +46,8 @@
           }
         },
         "arnes-horizontal": {
-          "frames_esperados": 137,
+          "_fuente": "ORDEN CB5: frames_esperados bajado de 137 a 102 -- el clip fuente agrandaba y achicaba el carro antes de abrirse (medido via bbox por frame), se recorto el origen al frame donde el carro ya esta en su tamano minimo y empieza a despiezarse; solo quedan 102 frames nativos desde ahi hasta el final del clip (102 < 137, se uso 1:1 sin duplicar para rellenar). Resolucion/calidad sin cambios.",
+          "frames_esperados": 102,
           "min_frames_pct": 0.90,
           "resolucion": {
             "desk": {"w": 1440, "h": 704},
