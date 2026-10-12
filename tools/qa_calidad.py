@@ -20,9 +20,52 @@ import glob
 import json
 import os
 import re
+import subprocess
 import sys
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+
+# ---------- estandar por repo (ORDEN CB1: motos vertical y carros horizontal son formatos
+# legitimos distintos, no una desviacion a forzar a un unico tamano) ----------
+
+def detect_repo_name(landing_path):
+    """Nombre del repo git que contiene landing_path (ultimo segmento del remote 'origin'),
+    o el nombre del directorio si no hay remote/.git."""
+    d = os.path.abspath(landing_path)
+    while True:
+        if os.path.isdir(os.path.join(d, '.git')):
+            try:
+                url = subprocess.check_output(
+                    ['git', '-C', d, 'remote', 'get-url', 'origin'],
+                    stderr=subprocess.DEVNULL, text=True).strip()
+                name = url.rstrip('/').rsplit('/', 1)[-1]
+                return name[:-4] if name.endswith('.git') else name
+            except (subprocess.CalledProcessError, OSError):
+                return os.path.basename(d)
+        parent = os.path.dirname(d)
+        if parent == d:
+            return os.path.basename(os.path.abspath(landing_path))
+        d = parent
+
+
+def seleccionar_estandar(estandar, repo_name, notas):
+    """Si estandar.json tiene 'repos', usa SOLO la seccion del repo detectado (cada repo
+    tiene su propio formato de frames/resolucion). Si el repo no esta registrado, fusiona
+    todas las secciones conocidas (permisivo, con nota) en vez de fallar. Formato viejo
+    (estandar.json plano, sin 'repos') se respeta tal cual para no romper otros usos."""
+    if 'repos' not in estandar:
+        return estandar
+    sel = estandar['repos'].get(repo_name)
+    if sel is not None:
+        return sel
+    fusion = {}
+    for r in estandar['repos'].values():
+        fusion.update(r.get('animaciones', {}))
+    notas.append(
+        "repo '%s' no tiene seccion propia en estandar.json: se usa la union de todos los "
+        "repos conocidos (%s)" % (repo_name, ', '.join(estandar['repos'].keys())))
+    return {'animaciones': fusion}
 
 
 # ---------- utilidades de texto ----------
@@ -336,10 +379,15 @@ def main():
 
     fallas, advertencias, notas, animaciones = [], [], [], []
 
+    repo_name = detect_repo_name(landing_path)
+    estandar_repo = seleccionar_estandar(estandar, repo_name, notas)
+    if 'repos' in estandar:
+        notas.append("estandar por repo: '%s'" % repo_name)
+
     html_sin_comentarios = re.sub(r'<!--.*?-->', '', strip_js_comments(raw_html), flags=re.S)
     calls = parse_init_calls(html_sin_comentarios)
     for call in calls:
-        check_frames_y_resolucion(os.path.dirname(index_html_path), call, estandar, fallas, advertencias, animaciones)
+        check_frames_y_resolucion(os.path.dirname(index_html_path), call, estandar_repo, fallas, advertencias, animaciones)
 
     check_motor_js(index_html_path, raw_html, args.ref_js, fallas, advertencias, notas)
     n_placeholders = check_placeholders(landing_path, advertencias)
