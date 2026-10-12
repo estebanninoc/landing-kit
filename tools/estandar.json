@@ -1,0 +1,30 @@
+{
+  "_fuente": "Medido sobre utec-motos-landing/pack-scroll (commit 972b233, ORDEN BA1, estado post-fixes de la familia de escenas scroll-scrub documentada en ORDEN CA7..CA12 de carros). Ver ORDEN KIT1/KIT2 y tools/frames.sh.",
+  "animaciones": {
+    "despiece": {
+      "frames_esperados": 71,
+      "min_frames_pct": 0.90,
+      "resolucion": {
+        "desk": {"w": 1280, "h": 732},
+        "mob":  {"w": 720,  "h": 412}
+      },
+      "kb_por_frame": {
+        "desk": {"avg": 77.22, "tolerancia_pct": 0.25},
+        "mob":  {"avg": 37.37, "tolerancia_pct": 0.25}
+      }
+    },
+    "motor-mini": {
+      "frames_esperados": 137,
+      "min_frames_pct": 0.90,
+      "resolucion": {
+        "desk": {"w": 784, "h": 1361},
+        "mob":  {"w": 403, "h": 703}
+      },
+      "kb_por_frame": {
+        "desk": {"avg": 49.54, "tolerancia_pct": 0.25},
+        "mob":  {"avg": 23.79, "tolerancia_pct": 0.25}
+      }
+    }
+  },
+  "motor_js_referencia": "engine/scrub.js"
+}

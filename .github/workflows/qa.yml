@@ -1,0 +1,16 @@
+name: QA calidad landing
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: QA de calidad (ORDEN KIT2)
+        run: python3 tools/qa_calidad.py .
