@@ -1,0 +1,311 @@
+{
+  "_comentario": "config.json de EJEMPLO — reproduce utec-motos-landing/pack-scroll (commit 972b233, ORDEN BA1). Para una landing nueva: clonar landing-kit y reemplazar SOLO estos valores (y los assets en img/vid/vid-pack que referencian).",
+  "meta": {
+    "title": "MOTOS PRO: +900 manuales de taller de +100 marcas · repara tu moto tú mismo",
+    "description": "Deja de pagarle al taller: +900 manuales paso a paso de +100 marcas, despiece, diagramas eléctricos y tablas de torque. Pago único US$12.99.",
+    "og_description": "+900 manuales de taller de +100 marcas. Pago único US$12.99."
+  },
+  "textos": {
+    "pill": "🏍️ Biblioteca de taller MOTOS PRO · Celular + PC",
+    "hero_title_html": "Deja de pagarle al taller.<br>Repara tu moto <span class=\"cut\">tú mismo</span>.",
+    "hero_sub_html": "<b>Más de 900 manuales de taller</b> de <b>+100 marcas</b>, con despiece, diagramas eléctricos y el paso a paso para arreglar las fallas más comunes. En tu celular o en el PC.",
+    "cta_hero": "Quiero mis manuales · US$12.99 →",
+    "cta_note": "Pago único · Acceso inmediato · Es tuyo para siempre",
+    "trust_chips": [
+      "✅ Pago único",
+      "⚡ Acceso inmediato",
+      "🛡️ Garantía 7 días"
+    ],
+    "marcas_label": "Compatible con más de 100 marcas",
+    "despiece_eyebrow": "Así se ve por dentro",
+    "despiece_title": "Tu moto, pieza por pieza",
+    "despiece_lead": "Baja y mira cómo se abre. <b>Así de claro</b> te lo muestra el manual de tu moto: cada pieza, el orden de armado y el torque de cada tornillo.",
+    "pack_intro_eyebrow": "Así es el contenido",
+    "pack_intro_title": "Lo que hay dentro del pack",
+    "pack_intro_lead": "Baja y mira cada sistema abrirse pieza por pieza, con su nombre. <b>Así de claro</b> te lo muestra el manual de tu moto, para tu marca y tu modelo."
+  },
+  "precios": {
+    "moneda": "US$",
+    "base": "12.99",
+    "a": "14.98",
+    "b": "14.98",
+    "ab": "16.97",
+    "antes_base": "29.99"
+  },
+  "links_pago": {
+    "base": "#STRIPE-PENDIENTE",
+    "a": "#STRIPE-PENDIENTE",
+    "b": "#STRIPE-PENDIENTE",
+    "ab": "#STRIPE-PENDIENTE"
+  },
+  "paleta": {
+    "bg": "#000",
+    "panel": "#101012",
+    "panel2": "#17171a",
+    "line": "#28282d",
+    "tx": "#ffffff",
+    "mut": "#9a9aa3",
+    "dim": "#6e6e77",
+    "red": "#E60012",
+    "red_tx": "#FF2A3C",
+    "blue": "#3B72C8"
+  },
+  "marcas": {
+    "row1": [
+      {
+        "name": "Honda",
+        "logo": "img/logos/honda.svg",
+        "w": 33,
+        "h": 26
+      },
+      {
+        "name": "Suzuki",
+        "logo": "img/logos/suzuki.svg",
+        "w": 48,
+        "h": 26
+      },
+      {
+        "name": "Bajaj",
+        "logo": "img/logos/bajaj.svg",
+        "w": 150,
+        "h": 26
+      },
+      {
+        "name": "Hero",
+        "logo": "img/logos/hero.svg",
+        "w": 99,
+        "h": 26
+      },
+      {
+        "name": "AKT",
+        "logo": "img/logos/akt.webp",
+        "w": 120,
+        "h": 26
+      },
+      {
+        "name": "CFMoto",
+        "logo": "img/logos/cfmoto.svg",
+        "w": 162,
+        "h": 26
+      },
+      {
+        "name": "BMW",
+        "logo": "img/logos/bmw.svg",
+        "w": 32,
+        "h": 26
+      },
+      {
+        "name": "Harley-Davidson",
+        "logo": "img/logos/harley-davidson.svg",
+        "w": 39,
+        "h": 26
+      },
+      {
+        "name": "Aprilia",
+        "logo": "img/logos/aprilia.svg",
+        "w": 72,
+        "h": 26
+      },
+      {
+        "name": "Bera",
+        "logo": "img/logos/bera.png",
+        "w": 53,
+        "h": 26
+      },
+      {
+        "name": "Husqvarna",
+        "logo": "img/logos/husqvarna.svg",
+        "w": 133,
+        "h": 26
+      },
+      {
+        "name": "Indian",
+        "logo": "img/logos/indian.svg",
+        "w": 71,
+        "h": 26
+      },
+      {
+        "name": "Keeway",
+        "logo": "img/logos/keeway.svg",
+        "w": 139,
+        "h": 26
+      },
+      {
+        "name": "Kymco",
+        "logo": "img/logos/kymco.svg",
+        "w": 145,
+        "h": 26
+      },
+      {
+        "name": "Loncin",
+        "logo": "img/logos/loncin.png",
+        "w": 152,
+        "h": 26
+      },
+      {
+        "name": "Moto Guzzi",
+        "logo": "img/logos/moto-guzzi.svg",
+        "w": 91,
+        "h": 26
+      },
+      {
+        "name": "Motomel",
+        "logo": "img/logos/motomel.png",
+        "w": 56,
+        "h": 26
+      }
+    ],
+    "row2": [
+      {
+        "name": "Yamaha",
+        "logo": "img/logos/yamaha.svg",
+        "w": 139,
+        "h": 26
+      },
+      {
+        "name": "Kawasaki",
+        "logo": "img/logos/kawasaki.svg",
+        "w": 180,
+        "h": 26
+      },
+      {
+        "name": "TVS",
+        "logo": "img/logos/tvs.svg",
+        "w": 178,
+        "h": 26
+      },
+      {
+        "name": "KTM",
+        "logo": "img/logos/ktm.svg",
+        "w": 103,
+        "h": 26
+      },
+      {
+        "name": "Italika",
+        "logo": "img/logos/italika.svg",
+        "w": 150,
+        "h": 26
+      },
+      {
+        "name": "Vento",
+        "logo": "img/logos/vento.svg",
+        "w": 156,
+        "h": 26
+      },
+      {
+        "name": "Gilera",
+        "logo": "img/logos/gilera.svg",
+        "w": 22,
+        "h": 26
+      },
+      {
+        "name": "SYM",
+        "logo": "img/logos/sym.svg",
+        "w": 81,
+        "h": 26
+      },
+      {
+        "name": "Vespa",
+        "logo": "img/logos/vespa.svg",
+        "w": 87,
+        "h": 26
+      },
+      {
+        "name": "Ducati",
+        "logo": "img/logos/ducati.svg",
+        "w": 30,
+        "h": 26
+      },
+      {
+        "name": "MV Agusta",
+        "logo": "img/logos/mv-agusta.svg",
+        "w": 39,
+        "h": 26
+      },
+      {
+        "name": "Piaggio",
+        "logo": "img/logos/piaggio.svg",
+        "w": 23,
+        "h": 26
+      },
+      {
+        "name": "Royal Enfield",
+        "logo": "img/logos/royal-enfield.svg",
+        "w": 70,
+        "h": 26
+      },
+      {
+        "name": "Shineray",
+        "logo": "img/logos/shineray.png",
+        "w": 147,
+        "h": 26
+      },
+      {
+        "name": "Triumph",
+        "logo": "img/logos/triumph.svg",
+        "w": 95,
+        "h": 26
+      },
+      {
+        "name": "Zanella",
+        "logo": "img/logos/zanella.png",
+        "w": 60,
+        "h": 26
+      },
+      {
+        "name": "Zongshen",
+        "logo": "img/logos/zongshen.png",
+        "w": 37,
+        "h": 26
+      }
+    ]
+  },
+  "animaciones": [
+    {
+      "id": "despiece",
+      "stage": "dp-stage",
+      "canvas": "dp-canvas",
+      "bar": "dp-bar",
+      "n": 71,
+      "w": 1280,
+      "h": 732,
+      "dirMob": "img/dp-frames/mob/",
+      "dirDesk": "img/dp-frames/desk/",
+      "chips": [
+        "Motor",
+        "Tanque",
+        "Horquilla",
+        "Chasis",
+        "Cadena",
+        "Escape",
+        "Ruedas",
+        "Embrague"
+      ],
+      "aria_label": "Una moto armada que se abre en despiece mientras bajas: motor, tanque, horquilla, chasis, cadena, escape, ruedas y embrague por separado."
+    },
+    {
+      "id": "motor-mini",
+      "stage": "scr-motor-stage",
+      "canvas": "scr-motor-canvas",
+      "n": 137,
+      "w": 784,
+      "h": 1361,
+      "dirMob": "img/scroll-frames/motor/mob/",
+      "dirDesk": "img/scroll-frames/motor/desk/",
+      "lutRef": "LUT_MOTOR",
+      "chips": [
+        "Motor",
+        "Tapa de válvulas",
+        "Árbol de levas",
+        "Culata",
+        "Cilindro",
+        "Pistón",
+        "Biela",
+        "Cigüeñal",
+        "Embrague",
+        "Magneto"
+      ],
+      "aria_label": "Motor de motocicleta que se desarma pieza por pieza: tapa de válvulas, árbol de levas, culata, cilindro, pistón, biela, cigüeñal, embrague, magneto."
+    }
+  ]
+}
